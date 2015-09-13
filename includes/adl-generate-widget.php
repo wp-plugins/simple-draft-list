@@ -23,10 +23,11 @@ if ( ( float ) $wp_version >= 2.8 ) {
 		* @uses		WP_Widget				Standard WP_Widget class
 		*/
 
-		function DraftListWidget() {
-			parent::WP_Widget(	'draft_list_widget',
-								__( 'Draft List', 'simple-draft-list' ),
-								array( 'description' => __( 'Display a list of draft posts and/or pages.', 'simple-draft-list' ), 'class' => 'my-widget-class' )
+		function __construct() {
+
+			parent::__construct( 'draft_list_widget',
+								 __( 'Draft List', 'simple-draft-list' ),
+								 array( 'description' => __( 'Display a list of draft posts and/or pages.', 'simple-draft-list' ), 'class' => 'my-widget-class' )
 								);
 		}
 
